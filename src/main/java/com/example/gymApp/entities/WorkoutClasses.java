@@ -1,7 +1,8 @@
 package com.example.gymApp.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.example.gymApp.Dtos.WorkoutClassesDto;
+
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -41,5 +42,4 @@ public class WorkoutClasses {
                 this.price = workoutClassesDto.getPrice();
 
             }
-        }
-}
+    }

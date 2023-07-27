@@ -1,8 +1,8 @@
 package com.example.gymApp.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.example.gymApp.Dtos.TrainersDto;
+
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,10 +32,10 @@ public class Trainers {
 
 
         public Trainers(TrainersDto trainersDto) {
-            if (trainerName.getTrainerName() != null) {
+            if (trainersDto.getTrainerName() != null) {
                 this.trainerName = trainersDto.getTrainerName();
             }
-            if (TrainersDto.getClasses() != null) {
+            if (trainersDto.getClasses() != null) {
                 this.classes = trainersDto.getClasses();
             }
 

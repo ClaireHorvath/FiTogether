@@ -1,5 +1,7 @@
 package com.example.gymApp.entities;
 
+import com.example.gymApp.Dtos.UsersDto;
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -30,7 +32,6 @@ public class Users {
         @OneToMany(mappedBy = "users", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST}, orphanRemoval = true)
         @JsonManagedReference
         private Set<BookClass> bookClassSet = new HashSet<>();
-
 
 
         public Users(UsersDto usersDto){

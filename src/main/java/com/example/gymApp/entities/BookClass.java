@@ -1,8 +1,9 @@
 package com.example.gymApp.entities;
 
+import com.example.gymApp.Dtos.BookClassDto;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -53,5 +54,3 @@ public class BookClass {
             }
         }
 }
-
-
