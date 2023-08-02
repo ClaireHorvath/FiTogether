@@ -48,7 +48,6 @@ public class BookClass {
             if (bookClassDto.getClasses() != null) {
                 this.classes = bookClassDto.getClasses();
             }
-
             if (bookClassDto.getTrainer() != null) {
                 this.trainer = bookClassDto.getTrainer();
             }
