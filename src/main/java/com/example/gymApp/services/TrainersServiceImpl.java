@@ -12,7 +12,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class TrainersServiceImpl {
+public class TrainersServiceImpl implements TrainersService {
     @Autowired
     private TrainersRepository trainersRepository;
 

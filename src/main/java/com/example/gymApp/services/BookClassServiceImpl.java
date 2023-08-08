@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class BookClassServiceImpl {
+public class BookClassServiceImpl implements BookClassService {
     @Autowired
     public UsersRepository usersRepository;
 
@@ -64,12 +64,11 @@ public class BookClassServiceImpl {
 
     @Override
     @Transactional
-    public
-}
-
-
-
-    @PutMapping("/{bookedclass}")
-    public void updateClassBooking(@RequestBody BookClassDto bookClassDto) {
-        bookClassService.updateClassBooking(bookClassDto);
+    public updateClassBooking(BookClassDto bookClassDto) {
+        Optional<BookClass> bookClassOptional = bookClassRepository.findById(bookClassDto.getId());
+        bookClassOptional.ifPresent(classes -> {
+            classes.setBody(bookClassDto.getBody());
+            bookClassRepository.saveAndFlush(classes);
+        });
     }
+}
