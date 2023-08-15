@@ -1,7 +1,10 @@
 package com.example.gymApp.controllers;
 
 import com.example.gymApp.Dtos.UsersDto;
+import com.example.gymApp.services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

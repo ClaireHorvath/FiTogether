@@ -3,6 +3,7 @@ package com.example.gymApp.services;
 import com.example.gymApp.Dtos.UsersDto;
 import com.example.gymApp.entities.Users;
 import com.example.gymApp.repositories.UsersRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
