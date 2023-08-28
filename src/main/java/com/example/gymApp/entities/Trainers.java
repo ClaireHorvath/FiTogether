@@ -7,8 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-
 @Entity
 @Table(name = "Trainers")
 @Data
@@ -27,9 +25,6 @@ public class Trainers {
         @Column
         public String classes;
 
-        @Column
-        public double price;
-
 
         public Trainers(TrainersDto trainersDto) {
             if (trainersDto.getTrainerName() != null) {
@@ -38,8 +33,5 @@ public class Trainers {
             if (trainersDto.getClasses() != null) {
                 this.classes = trainersDto.getClasses();
             }
-
-            this.price = trainersDto.getPrice();
-
         }
 }

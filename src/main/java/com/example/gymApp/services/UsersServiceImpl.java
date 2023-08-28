@@ -32,12 +32,12 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public List<String> usersLogin(UsersDto usersDto) {
+
         return null;
     }
 
-    @Override
     @Transactional
-    public List<String> usersLogin(UsersDto usersDto) {
+    public List<String> userLogin(UsersDto usersDto) {
         List<String> response = new ArrayList<>();
         Optional<Users> usersOptional = usersRepository.findByUsername(usersDto.getUsername());
         if (usersOptional.isPresent()) {

@@ -64,7 +64,7 @@ public class BookClassServiceImpl implements BookClassService {
 
     @Override
     @Transactional
-    public updateClassBooking(BookClassDto bookClassDto) {
+    public void updateClassBooking(BookClassDto bookClassDto) {
         Optional<BookClass> bookClassOptional = bookClassRepository.findById(bookClassDto.getId());
         bookClassOptional.ifPresent(classes -> {
             classes.setBody(bookClassDto.getBody());
