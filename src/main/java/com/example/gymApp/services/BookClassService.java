@@ -21,4 +21,6 @@ public interface BookClassService {
 
     @Transactional
     Optional<BookClassDto> getAllAppointmentsByUserId(Long usersId);
+
+    void createClassBooking(BookClassDto bookClassDto);
 }

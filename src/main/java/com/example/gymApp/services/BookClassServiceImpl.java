@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class BookClassServiceImpl implements BookClassService {
+public abstract class BookClassServiceImpl implements BookClassService {
     @Autowired
     public UsersRepository usersRepository;
 
@@ -60,15 +60,5 @@ public class BookClassServiceImpl implements BookClassService {
             return Optional.of(new BookClassDto(bookClassOptional.get()));
         }
         return Optional.empty();
-    }
-
-    @Override
-    @Transactional
-    public void updateClassBooking(BookClassDto bookClassDto) {
-        Optional<BookClass> bookClassOptional = bookClassRepository.findById(bookClassDto.getId());
-        bookClassOptional.ifPresent(classes -> {
-            classes.setBody(bookClassDto.getBody());
-            bookClassRepository.saveAndFlush(classes);
-        });
     }
 }

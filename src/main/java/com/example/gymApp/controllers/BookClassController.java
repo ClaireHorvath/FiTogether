@@ -15,12 +15,7 @@ public class BookClassController {
 
     @GetMapping("/bookedclass/{usersId}")
     public Optional<BookClassDto> getClassBookingByUserId(@PathVariable Long usersId) {
-        return bookClassService.getAllClassBookingsByUsersId(usersId);
-    }
-
-    @PutMapping("/{bookedclass}")
-    public void updateClassBooking(@RequestBody BookClassDto bookClassDto) {
-        bookClassService.updateClassBooking(bookClassDto);
+        return bookClassService.getAllAppointmentsByUserId(usersId);
     }
 
     @PostMapping("/bookedclass/{usersId}")
